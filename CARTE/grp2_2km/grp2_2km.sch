@@ -1,0 +1,170 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "2km Project"
+Date ""
+Rev ""
+Comp "Trinome n°2"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega16U2-AU U?
+U 1 1 63FE0AF8
+P 3950 2650
+F 0 "U?" H 3950 1161 50  0000 C CNN
+F 1 "ATmega16U2-AU" H 3950 1070 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 3950 2650 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc7799.pdf" H 3950 2650 50  0001 C CNN
+	1    3950 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 63FE67DA
+P 3100 1650
+F 0 "R2" H 3170 1696 50  0000 L CNN
+F 1 "R" H 3170 1605 50  0000 L CNN
+F 2 "" V 3030 1650 50  0001 C CNN
+F 3 "~" H 3100 1650 50  0001 C CNN
+	1    3100 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal_GND24 Y1
+U 1 1 63FE7331
+P 2750 1650
+F 0 "Y1" V 3000 1950 50  0000 R CNN
+F 1 "8Mhz" V 2900 1950 50  0000 R CNN
+F 2 "" H 2750 1650 50  0001 C CNN
+F 3 "~" H 2750 1650 50  0001 C CNN
+	1    2750 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 63FE7BEE
+P 2250 1400
+F 0 "C1" V 2502 1400 50  0000 C CNN
+F 1 "22pF" V 2411 1400 50  0000 C CNN
+F 2 "" H 2288 1250 50  0001 C CNN
+F 3 "~" H 2250 1400 50  0001 C CNN
+	1    2250 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 63FE815B
+P 2250 1850
+F 0 "C2" V 1998 1850 50  0000 C CNN
+F 1 "22pF" V 2089 1850 50  0000 C CNN
+F 2 "" H 2288 1700 50  0001 C CNN
+F 3 "~" H 2250 1850 50  0001 C CNN
+	1    2250 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 63FE8784
+P 2100 1950
+F 0 "#PWR?" H 2100 1700 50  0001 C CNN
+F 1 "GND" H 2105 1777 50  0000 C CNN
+F 2 "" H 2100 1950 50  0001 C CNN
+F 3 "" H 2100 1950 50  0001 C CNN
+	1    2100 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 1550 3250 1500
+Wire Wire Line
+	3250 1500 3100 1500
+Connection ~ 3100 1500
+Wire Wire Line
+	3100 1500 2750 1500
+Wire Wire Line
+	2750 1800 3100 1800
+Wire Wire Line
+	3250 1750 3250 1800
+Wire Wire Line
+	3250 1800 3100 1800
+Connection ~ 3100 1800
+Wire Wire Line
+	2750 1500 2750 1400
+Wire Wire Line
+	2750 1400 2400 1400
+Connection ~ 2750 1500
+Wire Wire Line
+	2750 1800 2750 1850
+Wire Wire Line
+	2750 1850 2400 1850
+Connection ~ 2750 1800
+Wire Wire Line
+	2100 1950 2100 1850
+Connection ~ 2100 1850
+Wire Wire Line
+	2100 1850 2100 1400
+$Comp
+L power:GND #PWR?
+U 1 1 63FF5779
+P 2550 1950
+F 0 "#PWR?" H 2550 1700 50  0001 C CNN
+F 1 "GND" H 2555 1777 50  0000 C CNN
+F 2 "" H 2550 1950 50  0001 C CNN
+F 3 "" H 2550 1950 50  0001 C CNN
+	1    2550 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 63FF68B0
+P 2950 1950
+F 0 "#PWR?" H 2950 1700 50  0001 C CNN
+F 1 "GND" H 2955 1777 50  0000 C CNN
+F 2 "" H 2950 1950 50  0001 C CNN
+F 3 "" H 2950 1950 50  0001 C CNN
+	1    2950 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1650 2550 1950
+Wire Wire Line
+	2950 1650 2950 1950
+$Comp
+L power:VCC #PWR?
+U 1 1 63FF8822
+P 4050 1150
+F 0 "#PWR?" H 4050 1000 50  0001 C CNN
+F 1 "VCC" H 4065 1323 50  0000 C CNN
+F 2 "" H 4050 1150 50  0001 C CNN
+F 3 "" H 4050 1150 50  0001 C CNN
+	1    4050 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1250 3950 1200
+Wire Wire Line
+	3950 1200 4050 1200
+Wire Wire Line
+	4050 1200 4050 1250
+Wire Wire Line
+	4050 1150 4050 1200
+Connection ~ 4050 1200
+$Comp
+L power:+5V #PWR?
+U 1 1 63FFA71F
+P 3850 1150
+F 0 "#PWR?" H 3850 1000 50  0001 C CNN
+F 1 "+5V" H 3865 1323 50  0000 C CNN
+F 2 "" H 3850 1150 50  0001 C CNN
+F 3 "" H 3850 1150 50  0001 C CNN
+	1    3850 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 1150 3850 1250
+$EndSCHEMATC
